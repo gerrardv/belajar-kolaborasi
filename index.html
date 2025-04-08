@@ -1,13 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BELAJAR BERSAMA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Together</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #f7a1b3, #f39cb8);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    padding: 20px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .go-to-app {
+    background-color: #ffa5b1;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+  }
+  
+  .content {
+    max-width: 600px;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .emoji {
+    font-size: 2rem;
+  }
+  
+  .content p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .study-button {
+    background-color: #ffd7dc;
+    color: #e35d78;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .status {
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }
+  
+  .onboarding-link {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: underline;
+    font-size: 1rem;
+  }
+  
+  .background-image {
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: 1;
+  }</style>
 </head>
 <body>
-    <h1>website belajar</h1>
-    <p>lorem ipsum</p>
-    <h2>hhdjhdkdhjhd</h2>
+  <header>
+    <div class="nav">
+      <div class="logo">Belajar Bersama</div>
+      <div class="nav-links">
+        <a href="#">Program Belajar</a>
+        <a href="#">Universitas</a>
+        <a href="#">Sign in</a>
+        <a href="#">Tentang kami</a>
+        <button class="go-to-app">Go To App</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <h1>Meet, chat, and study with students from all over the world <span class="emoji">🌍</span></h1>
+      <p>Join the largest <strong>global student community</strong> online and say goodbye to lack of motivation.</p>
+      <button class="study-button">Study Together now</button>
+      <div class="status">
+        <span>100% free!</span>
+        <span>•</span>
+        <span>25,160 Online</span>
+      </div>
+      <a href="#" class="onboarding-link">Join our Onboarding Session →</a>
+    </div>
+    <div class="background-image"></div>
+  </main>
+
 </body>
 </html>
