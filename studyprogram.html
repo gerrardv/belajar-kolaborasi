@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Programs | Study Together</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+      background: url('your-new-background.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .go-to-app {
+      background-color: #ff7f98;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .programs-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .program-card {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 30px 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .program-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .program-card p {
+      font-size: 1rem;
+      color: #f5f5f5;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo">Study together</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="university.html">University</a>
+        <a href="sign.html">Sign in</a>
+        <a href="about.html">About us</a>
+        <button class="go-to-app">Go To App</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>Find Your Study Vibe ✨</h1>
+    <div class="programs-container">
+      <div class="program-card">
+        <h2>🌱 Pomodoro Focus Rooms</h2>
+        <p>Stay on track using the proven 25/5 method in group study sessions with timers and chats.</p>
+      </div>
+      <div class="program-card">
+        <h2>💬 Peer Q&A Circles</h2>
+        <p>Ask questions and get quick help from students in your field, live or asynchronously.</p>
+      </div>
+      <div class="program-card">
+        <h2>🚀 Exam Power Weeks</h2>
+        <p>Join themed challenge weeks to prep for finals with others who share your grind mode.</p>
+      </div>
+      <div class="program-card">
+        <h2>🧠 Language Clubs</h2>
+        <p>Practice languages with real people and stay consistent through fun group goals.</p>
+      </div>
+      <div class="program-card">
+        <h2>🌙 Midnight Study Zone</h2>
+        <p>Night owl? Join late-night virtual sessions with calm music and quiet accountability.</p>
+      </div>
+      <div class="program-card">
+        <h2>📆 Daily Goal Check-ins</h2>
+        <p>Start your day with a goal-setting room and celebrate progress with a supportive group.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Study Together. Designed with 💜 for students worldwide.
+  </footer>
+
+</body>
+</html>
