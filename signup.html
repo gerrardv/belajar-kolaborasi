@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sign In - Study Together</title>
+  <title>Sign Up - Study Together</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -55,7 +55,7 @@
       padding: 40px 20px;
     }
 
-    .signin-container {
+    .signup-container {
       background-color: rgba(0, 0, 0, 0.4);
       padding: 40px;
       border-radius: 15px;
@@ -76,7 +76,9 @@
     }
 
     input[type="text"],
-    input[type="password"] {
+    input[type="email"],
+    input[type="password"],
+    input[type="date"] {
       width: 100%;
       padding: 10px;
       border: none;
@@ -125,7 +127,7 @@
 </head>
 <body>
 
-  <!-- Header (same as your previous pages) -->
+  <!-- Header from your previous page -->
   <header>
     <div class="nav">
       <div class="logo">Study together</div>
@@ -140,21 +142,30 @@
     </div>
   </header>
 
-  <!-- Sign In Form -->
+  <!-- Sign Up Form -->
   <main>
-    <div class="signin-container">
-      <h2>Sign In</h2>
+    <div class="signup-container">
+      <h2>Create an Account</h2>
       <form action="#" method="POST">
-        <label for="email-username">Email or Username</label>
-        <input type="text" id="email-username" name="email-username" required />
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required />
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required />
 
-        <button type="submit" class="submit-btn">Log In</button>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required />
+
+        <button type="submit" class="submit-btn">Sign Up</button>
       </form>
       <div class="form-footer">
-        Don't have an account? <a href="signup.html">Sign up here</a>
+        Already have an account? <a href="sign.html">Sign in here</a>
       </div>
     </div>
   </main>
