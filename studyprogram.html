@@ -1,136 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Study Program</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Together</title>
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #e2b7e8;
-      color: white;
+      background: #e6f2ff;
+      color: #264e86;
     }
-
-    header {
-      padding: 20px;
+    nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #d9a6f0;
+      padding: 20px 10%;
+      background: #e6f2ff;
     }
-
     .logo {
-      font-weight: bold;
       font-size: 1.5rem;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    .signup-button {
-      background-color: #ffa5b1;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 20px;
       font-weight: bold;
-      cursor: pointer;
-      color: #000;
+      color: #264e86;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #264e86;
+      font-weight: 500;
+    }
+    .signup-btn {
+      padding: 8px 16px;
+      background: #4da6ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-    .slider {
-      width: 100%;
-      max-height: 300px;
+    /* Hero */
+    .hero {
+      margin: 40px 10%;
+      background: linear-gradient(to bottom right, #cce7ff, #ffffff);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    .hero-text {
+      max-width: 50%;
+    }
+    .discount-badge {
+      background: #4da6ff;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2b85eb;
+      margin: 0;
+    }
+    .hero-image {
+      max-width: 40%;
       overflow: hidden;
+      border-radius: 12px;
     }
-
-    .slider img {
+    .hero-image img {
       width: 100%;
       height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      animation: slide 12s infinite;
+    }
+    @keyframes slide {
+      0%, 20% {content: url('https://images.unsplash.com/photo-1514474959185-1472d4c4e0d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZHVjdGl2aXR5fGVufDB8fDB8fHww');}
+      25%, 45% {content: url('https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdGl2aXR5fGVufDB8fDB8fHww');}
+      50%, 70% {content: url('https://plus.unsplash.com/premium_photo-1676325101955-1089267548d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2NpZW5jZXxlbnwwfHwwfHx8MA%3D%3D');}
+      75%, 100% {content: url('https://plus.unsplash.com/premium_photo-1683134169138-9037062cba51?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1hdGhlbWF0aWN8ZW58MHx8MHx8fDA%3D');}
+    }
+    .dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .dots span {
+      width: 10px;
+      height: 10px;
+      background: #d1d1d1;
+      border-radius: 50%;
       display: block;
     }
 
+    /* Programs */
     .programs {
-      padding: 40px 20px;
+      margin: 60px 10%;
+      text-align: center;
+    }
+    .programs-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .program-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 30px;
     }
-
     .program-card {
       background: white;
-      color: #333;
       padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    .program-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
       border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 16px;
     }
-
-    .program-card h3 {
-      margin-bottom: 10px;
-      color: #a23ac7;
-    }
-
-    .program-card p {
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-    }
-
-    .program-card .price {
+    .program-title {
+      font-size: 1.2rem;
       font-weight: bold;
-      color: #602da3;
-      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #264e86;
     }
-
+    .program-desc {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+    .program-price {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #264e86;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text, .hero-image {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">Study Together</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="university.html">University</a>
-      <a href="sign.html">Sign in</a>
-      <a href="about.html">About us</a>
-      <button class="signup-button">Sign up</button>
-    </nav>
-  </header>
+<!-- Navbar -->
+<nav>
+  <div class="logo">Study Together</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="university.html">University</a>
+    <a href="sign.html">Sign in</a>
+    <a href="about.html">About us</a>
+    <a href="signup.html" class="signup-btn">Sign up</a>
+  </div>
+</nav>
 
-  <section class="slider">
-    <!-- Replace src with your own uploaded banner image -->
-    <img src="933a4b78-4b54-444b-872a-8915c32dfd43.png" alt="Discount Banner">
-  </section>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="discount-badge">50% OFF : $24.99</div>
+    <h1 class="hero-title">Focus Session : Math, Economy, Science, English</h1>
+  </div>
+  <div class="hero-image">
+    <img src="photo-1552581234-26160f608093.avif" alt="Study Image">
+  </div>
+  <div class="dots">
+    <span></span><span></span><span></span><span></span>
+  </div>
+</section>
 
-  <section class="programs">
+<!-- Programs -->
+<section class="programs">
+  <h2 class="programs-title">Full Study Programs</h2>
+  <div class="program-grid">
     <div class="program-card">
-      <h3>Productivity Booster</h3>
-      <p>Work with global students, improve your study flow.</p>
-      <div class="price">$19.99</div>
+      <img src="productivity.webp" alt="Productivity Booster">
+      <div class="program-title">Productivity Booster</div>
+      <div class="program-desc">Work with global students, improve your study flow</div>
+      <div class="program-price">$19.99</div>
     </div>
-
     <div class="program-card">
-      <h3>Focus Rooms</h3>
-      <p>Join real-time rooms to stay focused and motivated.</p>
-      <div class="price">$9.99</div>
+      <img src="Focus.avif" alt="Focus Rooms">
+      <div class="program-title">Focus-Rooms</div>
+      <div class="program-desc">Join real-time rooms to stay focused and motivated</div>
+      <div class="program-price">$9.99</div>
     </div>
-
     <div class="program-card">
-      <h3>Custom Study Planner</h3>
-      <p>Organize your weekly plan and stay consistent.</p>
-      <div class="price">$14.99</div>
+      <img src="studyPlanner.avif" alt="Custom Study Planner">
+      <div class="program-title">Custom Study Planner</div>
+      <div class="program-desc">Organize your weekly plan and stay consistent</div>
+      <div class="program-price">$14.99</div>
     </div>
-
     <div class="program-card">
-      <h3>Daily Challenges</h3>
-      <p>Earn badges and compete with others to stay motivated.</p>
-      <div class="price">Free</div>
+      <img src="poto.jpg" alt="Daily Challenges">
+      <div class="program-title">Daily Challenges</div>
+      <div class="program-desc">Earn badges and compete with others to stay motivated</div>
+      <div class="program-price">Free</div>
     </div>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>
