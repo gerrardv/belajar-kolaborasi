@@ -1,11 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Together</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom right, #a1b1f7, #da668a);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .go-to-app {
+      background-color: #ffa5b1;
+      border: none;
+      padding: 10px 20px;
+      margin-left: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      flex: 0 0 280px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo-img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .university-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .location {
+      font-size: 0.9rem;
+      color: #ffdce3;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      color: #ffe066;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .review {
+      font-size: 0.85rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .join-btn {
+      padding: 10px 20px;
+      background-color: #ffd7dc;
+      color: #602da3;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .join-btn:hover {
+      background-color: #f4b8c3;
+    }
+  </style>
 </head>
 <body>
-    
+  <header>
+    <div class="nav">
+      <div class="logo">Study Together</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="studyprogram.html">Study Program</a>
+        <a href="university.html">University</a>
+        <a href="sign.html">Sign in</a>
+        <a href="about.html">About us</a>
+        <a href="signup.html"><button class="go-to-app">Sign up</button></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2>🌟 Top Ranked Universities</h2>
+    <div class="carousel">
+      <div class="card">
+        <img src="Harvard_University_shield.png" class="logo-img" alt="Harvard" style="width: 203px; height: 255px">
+        <div class="university-name">Harvard University</div>
+        <div class="location">USA</div>
+        <div class="rating">★★★★★</div>
+        <div class="review">"Innovation!"</div>
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.harvard.edu/&ved=2ahUKEwi1g6rS54uNAxVfzzgGHSomII0QFnoECEQQAQ&usg=AOvVaw3sANW3NhYzzRZ3MLnP1KOQ"><button class="join-btn">Join</button></a>
+      </div>
+      <div class="card">
+        <img src="the-university-of-tokyo-logo-png_seeklogo-508692-removebg-preview.png" style="width: 203px; height: 255px"class="logo-img" alt="Tokyo">
+        <div class="university-name">University of Tokyo</div>
+        <div class="location">Japan</div>
+        <div class="rating">★★★★☆</div>
+        <div class="review">"Great prestigious research University."</div>
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.u-tokyo.ac.jp/en/index.html&ved=2ahUKEwiX98Ogy4yNAxUJzjgGHekkNjMQFnoECEIQAQ&usg=AOvVaw2vJ-hwF7O8g90rcB6mpCC7"><button class="join-btn">Join</button></a>
+      </div>
+      <div class="card">
+        <img src="imperial-removebg-preview.png" style="width: 203px; height: 255px">
+        <div class="university-name">Imperial College London</div>
+        <div class="location">London</div>
+        <div class="rating">★★★★★</div>
+        <div class="review">"A World-leading University"</div>
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.imperial.ac.uk/&ved=2ahUKEwiY5-jGy4yNAxW1T2cHHejNDrEQFnoECE4QAQ&usg=AOvVaw0UdOjGL1QAXSl1-Je2gsgU"><button class="join-btn">Join</button></a>
+      </div>
+      <div class="card">
+        <img src="Logo_Institut_Teknologi_Bandung.png" style="width: 203px; height: 255px"> 
+        <div class="university-name">Institut Teknologi Bandung</div>
+        <div class="location">Indonesia</div>
+        <div class="rating">★★★★★</div>
+        <div class="review">"The first engineering University in Indonesia"</div>
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://itb.ac.id/&ved=2ahUKEwjZ_Mqa5ouNAxVExTgGHW77DDgQFnoECB0QAQ&usg=AOvVaw0qPcjjJopyJcBLLFXTyNtI"><button class="join-btn">Join</button></a>
+      </div>
+      <div class="card">
+        <img src="Makara_of_Universitas_Indonesia.svg.png" style="width: 203px; height: 255px;" class="logo-img" alt="UI">
+        <div class="university-name">Universitas Indonesia</div>
+        <div class="location">Indoneisa</div>
+        <div class="rating">★★★★★</div>
+        <div class="review">"Historic and globally respected."</div>
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.ui.ac.id/&ved=2ahUKEwjVz4bry4yNAxV_SWwGHaOFNJwQFnoECCQQAQ&usg=AOvVaw11CEhEShs9Vl2TjJzIc4gx"><button class="join-btn">Join</button></a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
